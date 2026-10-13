@@ -1,0 +1,9 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+.env
+.env.*
+!.env.example
+ll_env/
+.venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
