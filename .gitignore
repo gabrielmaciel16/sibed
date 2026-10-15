@@ -1,4 +1,7 @@
 # Created by venv; see https://docs.python.org/3/library/venv.html
+#O Git registra versões dos arquivos do projeto. O GitHub pode hospedar esse histórico para compartilhamento e colaboração.
+#O .gitignore informa ao Git quais arquivos ele deve ignorar ao procurar novos arquivos para acompanhar
+
 #O .gitignore precisa conter a regra .env. O arquivo permanece no 
 #computador, mas continua existindo nos commits antigos; uma senha 
 #exposta precisa ser trocada.

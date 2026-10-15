@@ -1,3 +1,6 @@
+#O settings.py contém as configurações do projeto Django
+#Em relação a segurança . Em uma aplicação configurada corretamente, o Python é executado no servidor; o navegador recebe as páginas e respostas produzidas pela aplicação. O problema 
+# discutido aqui é a exposição do código ou dos arquivos de configuração.
 """
 Django settings for sibed project.
 
@@ -12,8 +15,15 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 
 from pathlib import Path
 import os
+#O os é um módulo que já vem com o Python e permite que o programa interaja com recursos do sistema operacional. 
+#Um módulo é um conjunto de funções e ferramentas que você pode utilizar no seu código.
 from dotenv import load_dotenv
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+#Uma variável de ambiente é um valor identificado por um nome e disponível para um programa durante sua execução. 
+# A biblioteca python-dotenv lê o .env e disponibiliza seus valores no ambiente do processo Python. Ela precisa ser instalada e chamada pelo código; simplesmente criar o arquivo não basta.
+#Método de instalação CMD:python -m pip install python-dotenv
+
+#BASE_DIR representa a pasta principal do projeto. A expressão BASE_DIR / ".env"
+#indica o caminho do arquivo que será lido.
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
@@ -73,6 +83,8 @@ WSGI_APPLICATION = 'sibed.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
+#A expressão os.environ['DB_PASSWORD'] significa: “obtenha o valor disponível com o nome DB_PASSWORD”.
+#Assim, a senha deixa de estar escrita diretamente no settings.py.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
