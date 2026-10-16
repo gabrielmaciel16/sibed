@@ -1,0 +1,1 @@
+#admin.py:Região onde importamos modelos que aparecerão no painela admnistrativo

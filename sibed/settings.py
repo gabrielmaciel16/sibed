@@ -41,6 +41,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#APP:Parte do projeto que gerencia alguma coisa.Ex:fazer inserção de 
+#textos,tópicos e etc no banco de dados.
+
+#comando para instalação de novos appa:
+#python manage.py startapp [nome_do_app]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'biblioteca',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +91,8 @@ WSGI_APPLICATION = 'sibed.wsgi.application'
 
 #A expressão os.environ['DB_PASSWORD'] significa: “obtenha o valor disponível com o nome DB_PASSWORD”.
 #Assim, a senha deixa de estar escrita diretamente no settings.py.
+#driver que conecta o Django ao MySQL:
+#python -m pip install mysqlclient
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
